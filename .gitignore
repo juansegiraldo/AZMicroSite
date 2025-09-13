@@ -30,3 +30,16 @@ node_modules/
 .env.development.local
 .env.test.local
 .env.production.local
+
+# Video files
+videos/
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.wmv
+*.flv
+*.webm
+*.mpg
+*.mpeg
+*.m4v

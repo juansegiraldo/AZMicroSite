@@ -22,14 +22,20 @@
         gap: 2rem;
     }
     
-    .quality-showcase {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
+    /* Data Quality responsive styles handled by individual elements */
     
     .security-showcase {
         grid-template-columns: 1fr;
         gap: 2rem;
+    }
+    
+    /* Security Dashboard Image Responsive */
+    .security-dashboard-img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        border-radius: 8px;
     }
     
     .contact-content {
@@ -136,6 +142,22 @@
         text-align: center;
     }
     
+    /* Hero Image Responsive */
+    .hero-image img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    /* Catalog Image Responsive */
+    .catalog-image {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
     /* Sections */
     section {
         padding: 3rem 0;
@@ -172,10 +194,57 @@
         gap: 1rem;
     }
     
-    /* Quality Images */
-    .quality-images {
-        grid-template-columns: 1fr;
-        gap: 1rem;
+    /* Video Embeds */
+    .video-embed {
+        margin: 0.5rem 0;
+    }
+    
+    /* Data Quality Section Mobile */
+    .quality-main-image {
+        margin: 1.5rem 0;
+    }
+    
+    /* Security Dashboard Image Mobile */
+    .security-image {
+        margin: 1rem 0;
+    }
+    
+    .security-dashboard-img {
+        padding: 0.5rem;
+        border-radius: 8px;
+        max-height: 400px;
+        object-fit: contain;
+    }
+    
+    .quality-video-section {
+        margin: 2rem 0;
+    }
+    
+    .quality-video-section h4 {
+        font-size: 1.25rem;
+    }
+    
+    .section-description {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .data-quality-image {
+        padding: 0.5rem;
+        border-radius: 8px;
+    }
+    
+    .video-embed {
+        margin: 1.5rem auto;
+        border-radius: 8px;
+    }
+    
+    /* Integration Image Responsive */
+    .integration-flow-image {
+        max-width: 67%;
+        width: 67%;
+        height: auto;
+        object-fit: contain;
     }
     
     /* Cards and Content */
@@ -200,6 +269,16 @@
     
     .hero-image .placeholder-image {
         min-height: 250px;
+    }
+    
+    /* Data Quality Image Responsive */
+    .data-quality-image {
+        margin: 0.75rem 0;
+    }
+    
+    .responsive-image {
+        max-height: 400px;
+        object-fit: contain;
     }
     
     /* Footer */
@@ -254,6 +333,52 @@
         font-size: 1.25rem;
     }
     
+    /* Data Quality Section Small Mobile */
+    .quality-main-image {
+        margin: 1rem 0;
+    }
+    
+    /* Security Dashboard Image Small Mobile */
+    .security-image {
+        margin: 0.75rem 0;
+    }
+    
+    .security-dashboard-img {
+        padding: 0.25rem;
+        border-radius: 6px;
+        max-height: 300px;
+        object-fit: contain;
+    }
+    
+    .quality-video-section {
+        margin: 1.5rem 0;
+    }
+    
+    .quality-video-section h4 {
+        font-size: 1.125rem;
+    }
+    
+    .section-description {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+    }
+    
+    .data-quality-image {
+        margin: 0.5rem 0;
+        padding: 0.25rem;
+        border-radius: 6px;
+    }
+    
+    .video-embed {
+        margin: 1rem auto;
+        border-radius: 6px;
+    }
+    
+    .responsive-image {
+        max-height: 300px;
+        object-fit: contain;
+    }
+    
     /* Buttons */
     .btn {
         padding: 0.625rem 1.25rem;
@@ -263,6 +388,30 @@
     /* Hero CTA */
     .hero-cta {
         gap: 0.75rem;
+    }
+    
+    /* Hero Image for Small Mobile */
+    .hero-image img {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    /* Catalog Image for Small Mobile */
+    .catalog-image {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+    }
+    
+    /* Integration Image for Small Mobile */
+    .integration-flow-image {
+        max-width: 67%;
+        width: 67%;
+        height: auto;
+        object-fit: contain;
     }
 }
 
@@ -326,6 +475,11 @@
     .placeholder-content i {
         font-size: 1.75rem;
     }
+    
+    .responsive-image {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+    }
 }
 
 /* Landscape Orientation on Mobile */
@@ -334,12 +488,12 @@
         padding: 4rem 0 2rem;
     }
     
-    .nav-menu {
-        height: calc(100vh - 60px);
+    .data-quality-image {
+        margin: 0.25rem 0;
     }
     
-    .nav-list {
-        padding: 1rem;
+    .responsive-image {
+        max-height: 200px;
     }
 }
 
@@ -370,6 +524,16 @@
     .placeholder-video {
         border: 1px solid #ccc;
         background: white;
+    }
+    
+    /* Data Quality Image Print */
+    .data-quality-image {
+        break-inside: avoid;
+        page-break-inside: avoid;
+    }
+    
+    .responsive-image {
+        max-height: 250px;
     }
     
     body {
