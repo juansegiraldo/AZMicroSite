@@ -43,3 +43,7 @@ videos/
 *.mpg
 *.mpeg
 *.m4v
+
+# PowerPoint files
+*.pptx
+*.ppt
