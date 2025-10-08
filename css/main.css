@@ -44,6 +44,22 @@ h1 {
     line-height: 1.2;
 }
 
+/* Centrica logo inline styling */
+.centrica-logo-inline {
+    height: 5.4rem;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 0.5rem;
+}
+
+/* SAP Ariba logo inline styling */
+.sap-ariba-logo-inline {
+    height: 3rem;
+    width: auto;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+}
+
 h2 {
     font-size: 2rem;
     line-height: 1.3;
@@ -395,10 +411,164 @@ p {
     margin: 0 auto;
 }
 
+/* Why Us Section */
+.why-us {
+    padding: 4rem 0;
+    background-color: var(--background-white);
+}
+
+.why-us-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.why-us-item {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.why-us-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.why-us-image {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.why-us-item:hover .why-us-image {
+    transform: scale(1.02);
+}
+
+/* Responsive adjustments for why-us grid */
+@media (max-width: 1024px) {
+    .why-us-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .why-us-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+}
+
 /* About Section */
 .about {
     padding: 4rem 0;
     background-color: var(--background-white);
+}
+
+/* Business Challenges Section */
+.business-challenges {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.challenges-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.challenge-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--primary-blue);
+    position: relative;
+    cursor: pointer;
+}
+
+.challenge-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-top-color: var(--accent-yellow);
+}
+
+.challenge-number {
+    position: absolute;
+    top: -15px;
+    left: 2rem;
+    background: var(--primary-blue);
+    color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 1.1rem;
+    box-shadow: 0 2px 8px rgba(0, 69, 110, 0.3);
+}
+
+.challenge-card:hover .challenge-number {
+    background: var(--accent-yellow);
+    color: var(--primary-blue);
+    transform: scale(1.1);
+}
+
+.challenge-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+    margin-top: 0.5rem;
+}
+
+.challenge-card p {
+    color: var(--secondary-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive adjustments for challenges grid */
+@media (max-width: 1200px) {
+    .challenges-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .challenges-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .challenge-card {
+        padding: 1.5rem;
+    }
+    
+    .challenge-card h3 {
+        font-size: 1.1rem;
+    }
+    
+    .challenge-card p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .challenges-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
 }
 
 .about-content {
@@ -1264,4 +1434,484 @@ p {
 
 .download-btn .icon-download {
     font-size: 1.1rem;
+}
+
+/* Procurement Competence Center Section */
+.procurement-competence {
+    padding: 80px 0;
+    background: var(--background-light);
+}
+
+.procurement-showcase {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.procurement-image-container {
+    text-align: center;
+}
+
+.procurement-competence-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.procurement-competence-image:hover {
+    transform: scale(1.02);
+}
+
+.procurement-highlights {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+}
+
+.highlight-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.highlight-item {
+    text-align: center;
+    padding: 1rem;
+    background: var(--background-light);
+    border-radius: 8px;
+    border: 2px solid var(--border-gray);
+    transition: all 0.3s ease;
+}
+
+.highlight-item:hover {
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 69, 110, 0.1);
+}
+
+.highlight-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-blue);
+    margin-bottom: 0.5rem;
+}
+
+.highlight-label {
+    font-size: 0.9rem;
+    color: var(--secondary-gray);
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.awards-section {
+    border-top: 2px solid var(--border-gray);
+    padding-top: 1.5rem;
+}
+
+.awards-section h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.awards-list {
+    list-style: none;
+    padding: 0;
+}
+
+.awards-list li {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid var(--border-gray);
+    color: var(--text-body);
+    font-weight: 500;
+    position: relative;
+    padding-left: 1.5rem;
+}
+
+.awards-list li:last-child {
+    border-bottom: none;
+}
+
+.awards-list li::before {
+    content: "🏆";
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+    font-size: 1rem;
+}
+
+/* Responsive Design for Procurement Section */
+@media (max-width: 768px) {
+    .procurement-competence {
+        padding: 60px 0;
+    }
+    
+    .procurement-showcase {
+        gap: 2rem;
+    }
+    
+    .highlight-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    
+    .highlight-number {
+        font-size: 2rem;
+    }
+    
+    .highlight-label {
+        font-size: 0.8rem;
+    }
+    
+    .procurement-highlights {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .highlight-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .highlight-number {
+        font-size: 1.8rem;
+    }
+}
+
+/* Data Driven Section */
+.data-driven {
+    padding: 4rem 0;
+    background-color: var(--background-white);
+}
+
+.data-driven-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.data-driven-image-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.data-driven-image-content {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.data-driven-image-content:hover {
+    transform: scale(1.01);
+}
+
+/* Responsive Design for Data Driven Section */
+@media (max-width: 768px) {
+    .data-driven {
+        padding: 3rem 0;
+    }
+    
+    .data-driven-content {
+        padding: 0 1rem;
+    }
+}
+
+/* Orion Section */
+.orion {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.orion-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.orion-image-container {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.orion-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.orion-image:hover {
+    transform: scale(1.01);
+}
+
+/* Responsive Design for Orion Section */
+@media (max-width: 768px) {
+    .orion {
+        padding: 3rem 0;
+    }
+    
+    .orion-content {
+        padding: 0 1rem;
+    }
+}
+
+/* Our Recommended Approach Section */
+.recommended-approach {
+    padding: 4rem 0;
+    background-color: var(--background-white);
+}
+
+.recommended-approach .section-header {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.approach-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.approach-image-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.approach-image {
+    max-width: 100%;
+    max-height: 1000px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.approach-image:hover {
+    transform: scale(1.01);
+}
+
+/* Responsive Design for Recommended Approach Section */
+@media (max-width: 768px) {
+    .recommended-approach {
+        padding: 3rem 0;
+    }
+    
+    .recommended-approach .section-header {
+        padding-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .approach-content {
+        padding: 0 1rem;
+    }
+    
+    .approach-image {
+        max-height: 800px;
+    }
+}
+
+@media (max-width: 480px) {
+    .approach-image {
+        max-height: 600px;
+    }
+}
+
+/* SAP Ariba Guided Sourcing Benefits Section */
+.guided-sourcing-benefits {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.guided-sourcing-benefits .section-header {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.guided-sourcing-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.guided-sourcing-image-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.guided-sourcing-image {
+    max-width: 100%;
+    max-height: 1000px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.guided-sourcing-image:hover {
+    transform: scale(1.01);
+}
+
+/* Energy Sector Ariba Expertise Section */
+.energy-sector-expertise {
+    padding: 4rem 0;
+    background-color: var(--background-white);
+}
+
+.energy-sector-expertise .section-header {
+    margin-bottom: 2rem;
+    padding-top: 2rem;
+}
+
+.energy-expertise-content {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.energy-expertise-image-container {
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.energy-expertise-image {
+    max-width: 100%;
+    max-height: 1000px;
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    object-fit: contain;
+}
+
+.energy-expertise-image:hover {
+    transform: scale(1.01);
+}
+
+.energy-expertise-video-section {
+    margin: 3rem 0;
+    text-align: center;
+}
+
+.energy-expertise-video-section h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+}
+
+/* Responsive Design for Guided Sourcing Benefits Section */
+@media (max-width: 768px) {
+    .guided-sourcing-benefits {
+        padding: 3rem 0;
+    }
+    
+    .guided-sourcing-benefits .section-header {
+        padding-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .guided-sourcing-content {
+        padding: 0 1rem;
+    }
+    
+    .guided-sourcing-image {
+        max-height: 800px;
+    }
+}
+
+@media (max-width: 480px) {
+    .guided-sourcing-image {
+        max-height: 600px;
+    }
+}
+
+/* Responsive Design for Energy Sector Expertise Section */
+@media (max-width: 768px) {
+    .energy-sector-expertise {
+        padding: 3rem 0;
+    }
+    
+    .energy-sector-expertise .section-header {
+        padding-top: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .energy-expertise-content {
+        padding: 0 1rem;
+    }
+    
+    .energy-expertise-image {
+        max-height: 800px;
+    }
+}
+
+@media (max-width: 480px) {
+    .energy-expertise-image {
+        max-height: 600px;
+    }
+}
+
+/* Dummy Section */
+.dummy-section {
+    padding: 4rem 0;
+    background-color: var(--background-light);
+}
+
+.dummy-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.dummy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.dummy-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    border-top: 4px solid var(--primary-blue);
+}
+
+.dummy-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+    border-top-color: var(--accent-yellow);
+}
+
+.dummy-card h3 {
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.dummy-card p {
+    color: var(--secondary-gray);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Responsive Design for Dummy Section */
+@media (max-width: 768px) {
+    .dummy-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .dummy-card {
+        padding: 1.5rem;
+    }
 }
