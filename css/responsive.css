@@ -194,6 +194,12 @@
         gap: 1rem;
     }
     
+    /* Video Demonstrations Grid */
+    .videos-grid {
+        grid-template-columns: 1fr !important;
+        gap: 2rem !important;
+    }
+    
     /* Video Embeds */
     .video-embed {
         margin: 0.5rem 0;
