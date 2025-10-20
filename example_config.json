@@ -1,0 +1,103 @@
+{
+  "site": {
+    "title": "Digital Transformation Solutions for Acme Corp",
+    "description": "Stratesys provides innovative digital transformation and consulting services for Acme Corp",
+    "url": "https://stratesys-ts.co.uk/AcmeMicroSite.html"
+  },
+  "branding": {
+    "company_name": "Stratesys",
+    "logo_path": "images/Stratesys Logo.png",
+    "footer_logo_path": "images/Stratesys Logo White.png",
+    "footer_text": "&copy; 2025 Stratesys. Data Driven Business."
+  },
+  "hero": {
+    "title": "Digital Transformation for Acme Corp",
+    "subtitle": "Delivering innovative solutions that drive measurable business outcomes",
+    "image_path": "images/STR Hero Image.jpg",
+    "image_alt": "Stratesys Digital Innovation",
+    "primary_cta": {
+      "text": "Explore Our Solutions",
+      "link": "#services"
+    },
+    "secondary_cta": {
+      "text": "View Resources",
+      "link": "#resources"
+    }
+  },
+  "sections": {
+    "about": {
+      "description": "Stratesys is a leading technology consulting firm specializing in digital transformation, data governance, and enterprise solutions. We partner with organizations to deliver measurable impact through innovative, user-centric approaches.",
+      "image_path": "images/about-us-image.jpg",
+      "image_alt": "Stratesys Team"
+    },
+    "partners": {
+      "description": "We collaborate with industry-leading technology partners to deliver comprehensive solutions.",
+      "image_path": "images/partners-logos.png",
+      "image_alt": "Our Technology Partners"
+    },
+    "services": {
+      "title": "Our Services",
+      "description": "Comprehensive solutions tailored to your business needs",
+      "items": [
+        {
+          "name": "Digital Strategy",
+          "description": "Strategic planning and roadmap development for digital transformation initiatives",
+          "icon_path": "images/icons/strategy-icon.png"
+        },
+        {
+          "name": "Implementation",
+          "description": "End-to-end implementation of enterprise solutions with proven methodologies",
+          "icon_path": "images/icons/implementation-icon.png"
+        },
+        {
+          "name": "Optimization",
+          "description": "Continuous improvement and optimization of existing systems and processes",
+          "icon_path": "images/icons/optimization-icon.png"
+        }
+      ]
+    },
+    "detailed_service": {
+      "title": "Data Governance Excellence",
+      "description": "Our comprehensive approach to data governance ensures quality, compliance, and value",
+      "feature_title": "Key Capabilities",
+      "feature_description": "We provide end-to-end data governance solutions that transform how organizations manage their data assets.",
+      "feature_list": [
+        "Data Quality Assessment and Improvement",
+        "Governance Framework Design and Implementation",
+        "Compliance and Risk Management",
+        "Master Data Management"
+      ],
+      "feature_image_path": "images/data-governance-feature.jpg",
+      "feature_image_alt": "Data Governance Solutions",
+      "videos": [
+        {
+          "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "title": "Data Governance Overview"
+        },
+        {
+          "url": "https://www.youtube.com/embed/dQw4w9WgXcQ",
+          "title": "Implementation Approach"
+        }
+      ]
+    },
+    "resources": {
+      "description": "Download our latest insights and case studies",
+      "items": [
+        {
+          "title": "Featured Resource",
+          "name": "Digital Transformation Guide",
+          "description": "A comprehensive guide to successful digital transformation initiatives",
+          "url": "documents/digital-transformation-guide.pdf",
+          "button_text": "Download PDF"
+        },
+        {
+          "title": "Additional Resources",
+          "name": "More resources coming soon",
+          "description": "Check back for additional case studies and whitepapers",
+          "url": "",
+          "button_text": ""
+        }
+      ]
+    }
+  }
+}

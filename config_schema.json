@@ -1,0 +1,172 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "MicroSite Configuration Schema",
+  "description": "Configuration schema for generating B2B microsites",
+  "type": "object",
+  "required": ["site", "branding", "hero", "sections"],
+  "properties": {
+    "site": {
+      "type": "object",
+      "description": "Basic site metadata",
+      "required": ["title", "description", "url"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Main page title (appears in browser tab)"
+        },
+        "description": {
+          "type": "string",
+          "description": "Meta description for SEO"
+        },
+        "url": {
+          "type": "string",
+          "description": "Full URL where the site will be hosted"
+        }
+      }
+    },
+    "branding": {
+      "type": "object",
+      "description": "Company branding information",
+      "required": ["company_name", "logo_path", "footer_logo_path", "footer_text"],
+      "properties": {
+        "company_name": {
+          "type": "string",
+          "description": "Your company name"
+        },
+        "logo_path": {
+          "type": "string",
+          "description": "Path to company logo (for header)"
+        },
+        "footer_logo_path": {
+          "type": "string",
+          "description": "Path to footer logo (usually white version)"
+        },
+        "footer_text": {
+          "type": "string",
+          "description": "Footer copyright text"
+        }
+      }
+    },
+    "hero": {
+      "type": "object",
+      "description": "Hero section configuration",
+      "required": ["title", "subtitle", "image_path", "image_alt", "primary_cta", "secondary_cta"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "description": "Main hero headline"
+        },
+        "subtitle": {
+          "type": "string",
+          "description": "Hero subtitle/tagline"
+        },
+        "image_path": {
+          "type": "string",
+          "description": "Path to hero image"
+        },
+        "image_alt": {
+          "type": "string",
+          "description": "Alt text for hero image"
+        },
+        "primary_cta": {
+          "type": "object",
+          "properties": {
+            "text": {"type": "string"},
+            "link": {"type": "string"}
+          }
+        },
+        "secondary_cta": {
+          "type": "object",
+          "properties": {
+            "text": {"type": "string"},
+            "link": {"type": "string"}
+          }
+        }
+      }
+    },
+    "sections": {
+      "type": "object",
+      "description": "Content sections",
+      "properties": {
+        "about": {
+          "type": "object",
+          "properties": {
+            "description": {"type": "string"},
+            "image_path": {"type": "string"},
+            "image_alt": {"type": "string"}
+          }
+        },
+        "partners": {
+          "type": "object",
+          "properties": {
+            "description": {"type": "string"},
+            "image_path": {"type": "string"},
+            "image_alt": {"type": "string"}
+          }
+        },
+        "services": {
+          "type": "object",
+          "properties": {
+            "title": {"type": "string"},
+            "description": {"type": "string"},
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {"type": "string"},
+                  "description": {"type": "string"},
+                  "icon_path": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "detailed_service": {
+          "type": "object",
+          "properties": {
+            "title": {"type": "string"},
+            "description": {"type": "string"},
+            "feature_title": {"type": "string"},
+            "feature_description": {"type": "string"},
+            "feature_list": {
+              "type": "array",
+              "items": {"type": "string"}
+            },
+            "feature_image_path": {"type": "string"},
+            "feature_image_alt": {"type": "string"},
+            "videos": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "url": {"type": "string"},
+                  "title": {"type": "string"}
+                }
+              }
+            }
+          }
+        },
+        "resources": {
+          "type": "object",
+          "properties": {
+            "description": {"type": "string"},
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "title": {"type": "string"},
+                  "name": {"type": "string"},
+                  "description": {"type": "string"},
+                  "url": {"type": "string"},
+                  "button_text": {"type": "string"}
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
