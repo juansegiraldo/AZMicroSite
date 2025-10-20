@@ -3,6 +3,44 @@
 ## Overview
 This template (`MicroSite_Template.html`) is based on the AZMicroSite.html structure and provides a clean, reusable foundation for creating professional B2B microsites. It includes preserved sections and placeholders for easy customization.
 
+## ⚡ Quick Start - Automated Workflow (RECOMMENDED)
+
+The fastest way to create a new microsite is using the automated generator:
+
+### Step 1: Create Your Config File
+Copy and customize the example configuration:
+```bash
+cp example_config.json my_client_config.json
+```
+
+Edit `my_client_config.json` with your client's information. The config file includes:
+- Site metadata (title, description, URL)
+- Branding (company name, logos, footer)
+- Hero section (title, subtitle, CTAs, image)
+- Content sections (about, partners, services, resources)
+
+See `config_schema.json` for the complete structure reference.
+
+### Step 2: Generate Your Microsite
+Run the generator script:
+```bash
+python create_microsite.py my_client_config.json ClientNameMicroSite.html
+```
+
+That's it! Your new microsite is ready.
+
+### Step 3: Preview and Refine
+1. Open the generated HTML file in your browser
+2. Check that all content appears correctly
+3. Make any manual customizations if needed
+
+### Benefits of the Automated Workflow
+- ✓ **Fast**: Generate a complete microsite in seconds
+- ✓ **Consistent**: No missed placeholders or typos
+- ✓ **Version Control**: Track changes through JSON config files
+- ✓ **Repeatable**: Easily regenerate if you need to make changes
+- ✓ **Documentation**: Config files serve as documentation
+
 ## Preserved Sections
 The following sections are kept intact from the original:
 - **Header/Navigation**: Complete navigation structure with logo placeholder
@@ -53,7 +91,54 @@ The following sections are kept intact from the original:
 - PDF preview with download links
 - Placeholder for additional resources
 
-## How to Use This Template
+## Configuration File Reference
+
+The JSON configuration file structure:
+
+```json
+{
+  "site": {
+    "title": "Page title for browser tab",
+    "description": "SEO meta description",
+    "url": "Full URL where site will be hosted"
+  },
+  "branding": {
+    "company_name": "Your company name",
+    "logo_path": "images/logo.png",
+    "footer_logo_path": "images/logo-white.png",
+    "footer_text": "© 2025 Company Name. Tagline."
+  },
+  "hero": {
+    "title": "Main headline",
+    "subtitle": "Supporting text",
+    "image_path": "images/hero.jpg",
+    "image_alt": "Alt text for hero image",
+    "primary_cta": {
+      "text": "Button text",
+      "link": "#section-id"
+    },
+    "secondary_cta": {
+      "text": "Button text",
+      "link": "#another-section"
+    }
+  },
+  "sections": {
+    "about": { ... },
+    "partners": { ... },
+    "services": { ... },
+    "detailed_service": { ... },
+    "resources": { ... }
+  }
+}
+```
+
+See `example_config.json` for a complete, working example.
+
+---
+
+## Manual Workflow (Legacy)
+
+If you prefer to work directly with HTML, you can still use the manual approach:
 
 ### Step 1: Replace Placeholders
 Search and replace all `[PLACEHOLDER: ...]` text with your actual content:
@@ -87,31 +172,42 @@ You can:
 
 ## Agent Instructions for Template Usage
 
-When a user wants to create a new microsite using this template:
+When a user wants to create a new microsite:
+
+### Automated Approach (RECOMMENDED)
+
+1. **Create a config file**:
+   - Copy `example_config.json` to a new file (e.g., `client_name_config.json`)
+   - Ask the user for all required information:
+     - Site metadata (title, description, URL)
+     - Branding (company name, logos)
+     - Hero section content
+     - Section content (about, partners, services, resources)
+     - Images and media paths
+
+2. **Fill the config file**:
+   - Populate the JSON with the user's information
+   - Ensure all required fields are filled
+   - Use the schema (`config_schema.json`) as reference
+
+3. **Generate the microsite**:
+   - Run: `python create_microsite.py client_name_config.json ClientNameMicroSite.html`
+   - Review the output for any warnings
+   - Check for remaining placeholders
+
+4. **Manual refinements** (if needed):
+   - Add custom sections not covered by template
+   - Adjust styling or layout
+   - Add special features
+
+### Manual Approach (Legacy)
+
+If the user needs extensive customization beyond the template structure:
 
 1. **Copy the template**: Start with `MicroSite_Template.html`
-2. **Identify requirements**: Ask the user for:
-   - Company name and branding
-   - Client name (if applicable)
-   - Main value proposition
-   - Specific sections they want
-   - Images and media they have
-   - Any custom functionality needed
-
-3. **Replace placeholders systematically**:
-   - Start with meta tags and titles
-   - Update navigation and branding
-   - Customize hero section
-   - Fill in content sections
-   - Update resources and footer
-
-4. **Customize sections based on needs**:
-   - Add/remove service cards
-   - Modify video embeds
-   - Adjust image layouts
-   - Add custom features
-
-5. **Test responsiveness**: Ensure the site works on mobile devices
+2. **Replace placeholders systematically** following the sections below
+3. **Customize sections** as needed
+4. **Test responsiveness**
 
 ## File Structure Requirements
 Make sure you have these files in your project:
